@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="user/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>USER DASHBOARD</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}" />
+
+	<script th:src="@{/js/script.js}"></script>
+</head>
+<body>
+<section>
+<h1>Hi user dashboard</h1>
+<h1>USERNAME : <span th:text="${user.name}"></span></h1>
+<h1>EMAIL: <span th:text="${user.email}"></span></h1>
+<h2><a th:href="@{/logout}">LOG OUT</a></h2>
+</section>
+
+</body>
+</html>

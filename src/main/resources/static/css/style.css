@@ -1,0 +1,93 @@
+body {
+	background: #e2e2e2;
+
+} 
+.bg-primary{
+	background: #009688;
+}
+.textcolor{
+	color: white;
+}
+.banner{
+	width: 100%;
+	height: 100vh;
+	background:black;
+	color: white;
+	background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("/image/man.png");  
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: 22em;
+	
+}
+.position
+{
+	position: fixed;
+}
+.bt1
+{
+	right:100px;
+}
+.my-card
+{
+	margin:15px 150px 100px 150px;
+	padding: 20px;
+	background: #ffffff;
+	border-radius: 10px;
+	overflow: visible;
+}
+.bt{
+	margin-top: 15px;
+	margin-left: -13px;
+	
+}
+.gradient-custom {
+/* fallback for old browsers */
+background: #6a11cb;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
+
+/*@media only screen and(max-width:600px)
+{
+	{
+		.sidebar{
+			display: none;
+			width:80% !importatnt
+		}
+	}
+}*/
+/*side bar*/
+.sidebar{
+	width: 18%;
+	background-color: white;
+	height: 100%;
+	position: fixed;
+	padding-top: 45px;
+	
+}
+
+.sidebar a{
+	display: block;
+	width: 100%;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: grey;
+}
+
+.sidebar a:hover{
+	background-color: #e2e2e2;
+}
+.divider{
+	height: .5px;
+	width: 100%;
+	background-color: #e2e2e2;
+	border: 2px;
+}
+.content{
+	margin-left: 20%;
+	
+}
