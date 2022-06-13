@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="user/base::layout(~{::section})">
+
 <head>
-<meta charset="ISO-8859-1">
-<title>USER DASHBOARD</title>
+	<meta charset="ISO-8859-1">
+	<title>USER DASHBOARD</title>
 	<link rel="stylesheet" th:href="@{/css/style.css}" />
 
 	<script th:src="@{/js/script.js}"></script>
 </head>
+
 <body>
-<section>
-<h1>Hi user dashboard</h1>
-<h1>USERNAME : <span th:text="${user.name}"></span></h1>
-<h1>EMAIL: <span th:text="${user.email}"></span></h1>
-<h2><a th:href="@{/logout}">LOG OUT</a></h2>
-</section>
+	<section>
+		<div class="container">
+			<div class="card">
+				<div class="card-body my-5">
+					<div class="container text-center">
+						<img class="profile_picture center" style="height: 200px;width: 200px;"
+							th:src="@{'/image/contact.png'}">
+
+					</div>
+					<h1 class="text-center mt-3 text-secondary fst-italic">
+						Start Adding your Contact on Cloud!!!
+					</h1>
+					<a th:href="@{/user/add-contact}" class="btn btn-primary btn-block text-uppercase text-center mt-3"
+						style="margin-left: 40% ;">Add new Contact</a>
+
+
+				</div>
+
+			</div>
+
+		</div>
+		<script>
+			$(document).ready(() => {
+				$(".item").removeClass("active");
+				$("#home-link").addClass("active");
+
+			})
+		</script>
+	</section>
 
 </body>
+
 </html>

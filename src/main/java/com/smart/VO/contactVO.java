@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "contacttable")
 public class contactVO {
@@ -15,6 +17,12 @@ public class contactVO {
 	private int cid;
 	private String name;
 	private String secondName;
+	@Override
+	public String toString() {
+		return "contactVO [cid=" + cid + ", name=" + name + ", secondName=" + secondName + ", email=" + email
+				+ ", work=" + work + ", phone=" + phone + ", img=" + img + ", description=" + description + ", userVO="
+				+ userVO + "]";
+	}
 	private String email;
 	private String work;
 	private String phone;
@@ -61,7 +69,21 @@ public class contactVO {
 		this.img = img;
 	}
 	private String img;
+	private String description;
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public userVO getUserVO() {
+		return userVO;
+	}
+	public void setUserVO(userVO userVO) {
+		this.userVO = userVO;
+	}
 	@ManyToOne
+	@JsonIgnore
 	private userVO userVO;
 
 }

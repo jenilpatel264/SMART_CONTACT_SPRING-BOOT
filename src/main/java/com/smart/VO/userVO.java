@@ -112,6 +112,14 @@ public class userVO {
 	private String about;
 	
 	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-	private List<contactVO> contacts = new ArrayList<>();
+	private List<contactVO> contactss = new ArrayList<>();
+
+	public List<contactVO> getContactss() {
+		return contactss;
+	}
+
+	public void setContactss(List<contactVO> contactss) {
+		this.contactss = contactss;
+	}
 
 }

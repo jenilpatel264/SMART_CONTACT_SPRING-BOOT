@@ -51,15 +51,23 @@ background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 11
 background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
 }
 
-/*@media only screen and(max-width:600px)
+@media only screen and(max-width:500px)
 {
-	{
+	
 		.sidebar{
 			display: none;
-			width:80% !importatnt
+			width:80% !important;
+			background: white;
+			height: 100vh;
+			position: fixed;
+			padding-top: 20px;
+			
 		}
-	}
-}*/
+		.content{
+			margin-left: 0%!important;
+		}
+	
+}
 /*side bar*/
 .sidebar{
 	width: 18%;
@@ -67,6 +75,8 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
 	height: 100%;
 	position: fixed;
 	padding-top: 45px;
+	margin-top: 7px;
+	z-index: 9999999999999999;
 	
 }
 
@@ -76,10 +86,12 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
 	padding: 10px 25px;
 	text-decoration: none;
 	color: grey;
+	
+	
 }
 
 .sidebar a:hover{
-	background-color: #e2e2e2;
+
 }
 .divider{
 	height: .5px;
@@ -89,5 +101,43 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
 }
 .content{
 	margin-left: 20%;
+	padding-left: 20px;
+	margin-top: 50px;
+	margin-right: 3%;
 	
+}
+.sidebar .crossbtn{
+	position: absolute;
+	top: 0;
+	right: 35px;
+	font-size: 36px;
+	cursor: pointer;
+	right: 10px;
+}
+.profile_picture{
+	width: 30px;
+	height: 30px;	
+	object-fit: cover;
+	border-radius: 50%;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.search-result{
+	position: absolute;
+	width: 100%;
+	padding: 10px;
+	border:1px solid grey;
+	display: none;
+	
+}
+.serach-container{
+	position: relative;
+}
+.active{
+	background: rgb(0, 119, 107);
+	color: white!important;
 }

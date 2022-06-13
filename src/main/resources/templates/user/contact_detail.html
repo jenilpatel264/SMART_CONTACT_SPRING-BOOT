@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="user/base::layout(~{::section})">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Contact Details</title>
+</head>
+
+<body>
+	<section>
+		<div class="card text-center" style="width: 100%;" th:if="${contact}">
+			<img class="profile_picture center" style="height: 200px;width: 200px;"
+				th:src="@{'/image/'+${contact.img}}">
+				<p><h2><span th:text="${contact.name+' '+contact.secondName}"></span></h2></p>
+			<table class="table">
+				<thead>
+
+				</thead>
+				<tbody class="text-center">
+					<tr>
+						<th scope="col">#ID</th>
+						<th scope="col" th:text="${'INFY'+contact.cid}"></th>
+
+					</tr>
+
+					<tr>
+						<th scope="col">EMAIL</th>
+						<th scope="col" th:text="${contact.email}"></th>
+
+					</tr>
+					<tr>
+						<th scope="col">PHONE</th>
+						<th scope="col" th:text="${contact.phone}"></th>
+
+					</tr>
+					<tr>
+						<th scope="col">WORK</th>
+						<th scope="col" th:text="${contact.work}"></th>
+
+					</tr>
+					<tr>
+						<th scope="col">DESCRIPTION</th>
+						<th scope="col" th:text="${contact.description}"></th>
+
+					</tr>
+
+
+
+					</tbodycl>
+			</table>
+		</div>
+		<h3 th:unless="${contact}" class="text-center bg-danger" style="color: white;">YOU DON'T HAVE PERMISSION TO ACCESS THIS CONTACT DETAILS</h3>
+	</section>
+
+</body>
+
+</html>
